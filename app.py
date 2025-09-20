@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route("/", methods=["GET", "POST"])
 def home():
     bmi_result = None
-    if request.method == "Post":
+    if request.method == "POST":
         name = request.form["name"]
         age = int (request.form["age"])
         weight = float(request.form["weight"])
